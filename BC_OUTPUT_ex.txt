@@ -1,0 +1,52 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: S01,S02,S04,S07,S08->D1
+    R2: S01,S02,S03,S05,S07,S08->D1
+    R3: S01,S02,S03,S07,S08,S18->D1
+    R4: S01,S02,S03,S07,S23->D1
+    R5: S09,S10,S14,S17,S16->D2
+    R6: S09,S10,S14,S17,S19->D2
+    R7: S03,S05,S09,S11,S20,S21,S06->D3
+    R8: S03,S05,S09,S11,S20,S21,S12->D3
+    R9: S03,S05,S09,S11,S20,S21,S13->D3
+    R10: S01,S09,S10,S15,S17->D4
+    R11: S01,S09,S10,S15->D5
+    R12: S01,S02,S08,S07,S10->D6
+
+  2) Triệu chứng người dùng mắc phải
+    S03, S12, S16, S01, S02, S04, S07, S05, S23.
+
+  3) Bệnh nghi ngờ
+    D1.
+
+PART 2. Suy diễn
+  1) Goal D1. Tìm thấy luật R1:S01,S02,S04,S07,S08->D1. Các goals mới cần chứng mình là S01, S02, S04, S07, S08.
+  2) -Goal S01. Cập nhật triệu chứng S01, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+  3) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+  4) -Goal S04. Cập nhật triệu chứng S04, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+  5) -Goal S07. Cập nhật triệu chứng S07, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+  6) -Goal S08. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+  7) Goal D1. Tìm thấy luật R2:S01,S02,S03,S05,S07,S08->D1. Các goals mới cần chứng mình là S01, S02, S03, S05, S07, S08.
+  8) -Goal S01. Cập nhật triệu chứng S01, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+  9) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 10) -Goal S03. Cập nhật triệu chứng S03, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 11) -Goal S05. Cập nhật triệu chứng S05, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 12) -Goal S07. Cập nhật triệu chứng S07, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 13) -Goal S08. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 14) Goal D1. Tìm thấy luật R3:S01,S02,S03,S07,S08,S18->D1. Các goals mới cần chứng mình là S01, S02, S03, S07, S08, S18.
+ 15) -Goal S01. Cập nhật triệu chứng S01, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 16) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 17) -Goal S03. Cập nhật triệu chứng S03, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 18) -Goal S07. Cập nhật triệu chứng S07, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 19) -Goal S08. Không có luật nào để suy diễn/không có triệu chứng này ban đầu. Trả về thất bại.
+ 20) Goal D1. Tìm thấy luật R4:S01,S02,S03,S07,S23->D1. Các goals mới cần chứng mình là S01, S02, S03, S07, S23.
+ 21) -Goal S01. Cập nhật triệu chứng S01, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 22) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 23) -Goal S03. Cập nhật triệu chứng S03, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 24) -Goal S07. Cập nhật triệu chứng S07, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 25) -Goal S23. Cập nhật triệu chứng S23, bởi vì được tìm thấy trong tập triệu chứng gốc S03, S12, S16, S01, S02, S04, S07, S05, S23. Trả về thành công.
+ 26) ==>Goal D1. Đã được chứng minh, Trả về thành công
+
+PART 3. Kết quả
+  1) Goal D1 được chứng minh.
+  2) Road: R4.
